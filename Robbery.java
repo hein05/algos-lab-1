@@ -6,6 +6,7 @@
 
 public class Robbery {
 
+
 	// Using DP: Get the maximum value with capacity C and n items
 	public int maximizeRobWorthRecur(
 		int capacity,
@@ -13,6 +14,33 @@ public class Robbery {
 		int[] worths
 	) {
 		// fill in here, change the return
+		int grabIndex = 0;
+		int currentGrabSize = sizes[grabIndex];
+
+		int totalGrabValue = worths[grabIndex];
+
+		//Base Case
+		for (int i = 1; i < sizes.length; i++) {
+			int indexSize = sizes[i];
+			//Finding maximum grab in whole array with size limit.
+			if (totalGrabValue < worths[i]) {
+			//set current grab Value and choose.
+
+			}
+
+			//reduce and Check capacity of the bag.
+			
+		}
+		//Find if there is capacity in bag
+		if ((totalGrabSize - capacity) >= 0) {
+
+		}
+		//Return total Grab
+		else {
+			return totalGrabSize;
+		}
+
+
 			return 2;
 	}
 
@@ -30,6 +58,7 @@ public class Robbery {
 * Takes in a DP DPTable
 * Returns an int array of the individual worths of the items you took
 */
+
 	public int[] takeRobInventory(int[][] DPTable) {
 		// fill in here, change the return
 		return new int[DPTable.length];
